@@ -9,7 +9,7 @@
 
 cbmc/
 src/config.inc
-
+lib/
 # regression/test files
 *.out
 tests.log
