@@ -38,9 +38,9 @@ INCLUDES= -I $(CPROVER_DIR)/src -I ..
 
 LIBS = 
 
-CLEANFILES = 2ls$(EXEEXT) $(DELTA_OBJ)
+CLEANFILES = 2ls$(EXEEXT) $(DELTA_OBJ) lib2ls$(LIBEXT) 
 
-all: 2ls$(EXEEXT)
+all: 2ls$(EXEEXT) lib2ls$(LIBEXT)
 
 ifneq ($(wildcard $(CPROVER_DIR)/src/cpp/Makefile),)
   OBJ += $(CPROVER_DIR)/src/cpp/cpp$(LIBEXT)
@@ -56,4 +56,7 @@ endif
 
 2ls$(EXEEXT): $(OBJ)
 	$(LINKBIN)
+
+lib2ls$(LIBEXT): $(OBJ)
+  $(LINKLIB)
 
