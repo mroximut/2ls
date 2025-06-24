@@ -7,8 +7,8 @@
 
 #git submodule update --init --recursive
 cd lib/cbmc
-git checkout 2ls5.61_app_for_mallob
-./build_with_mallob.sh
+#git checkout 2ls5.61_app_for_mallob
+bash ./build_with_mallob.sh
 # git checkout $CBMC_VERSION
 # if grep '^MINISAT2' src/config.inc > /dev/null
 # then
@@ -27,7 +27,7 @@ git checkout 2ls5.61_app_for_mallob
 #   make -C src $2
 # fi
 cd ../..
-./lib/cbmc/build_with_mallob.sh
+bash ./lib/cbmc/build_with_mallob.sh
 # if [ "$COMPILER" != "" ]
 # then
 #   make -C src CXX=$COMPILER $2

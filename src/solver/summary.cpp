@@ -118,9 +118,9 @@ void summaryt::join(const summaryt &new_summary)
     break;
   case NO: terminates=NO;
     break;
-  case UNKNOWN:
+  case UNKNOWNT:
     if(terminates!=NO)
-      terminates=UNKNOWN;
+      terminates=UNKNOWNT;
     break;
   default: assert(false);
   }
@@ -141,7 +141,7 @@ std::string threeval2string(threevalt v)
   {
   case YES: return "yes";
   case NO: return "no";
-  case UNKNOWN: return "unknown";
+  case UNKNOWNT: return "unknown";
   }
   assert(false);
 }

@@ -58,5 +58,4 @@ endif
 	$(LINKBIN)
 
 lib2ls$(LIBEXT): $(OBJ)
-  $(LINKLIB)
-
+	$(LINKLIB)

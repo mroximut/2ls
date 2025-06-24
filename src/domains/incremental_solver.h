@@ -17,9 +17,12 @@ Author: Peter Schrammel
 
 #include <solvers/flattening/bv_pointers.h>
 #include <solvers/refinement/bv_refinement.h>
-#include <solvers/sat/satcheck.h>
+//#include <solvers/sat/satcheck.h>
+#include <solvers/sat/satcheck_mallob.h>
 
 #include "util.h"
+
+typedef satcheck_mallobt satcheckt;
 
 // #define DISPLAY_FORMULA
 // #define NO_ARITH_REFINEMENT

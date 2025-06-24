@@ -19,7 +19,7 @@ Author: Daniel Kroening, kroening@kroening.com
 #include <ssa/local_ssa.h>
 #include <domains/domain.h>
 
-typedef enum {YES, NO, UNKNOWN} threevalt;
+typedef enum {YES, NO, UNKNOWNT} threevalt;
 
 class summaryt
 {
@@ -39,7 +39,7 @@ class summaryt
     bw_invariant(nil_exprt()),
     aux_precondition(nil_exprt()),
     termination_argument(nil_exprt()),
-    terminates(UNKNOWN),
+    terminates(UNKNOWNT),
     mark_recompute(false) {}
 
   var_listt params;

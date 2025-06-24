@@ -95,7 +95,7 @@ void summarizer_fw_termt::compute_summary_rec(
   summary.globals_in=SSA.globals_in;
   summary.globals_out=SSA.globals_out;
   summary.fw_precondition=precondition;
-  summary.terminates=UNKNOWN;
+  summary.terminates=UNKNOWNT;
 
   // compute summary
   if(!options.get_bool_option("havoc"))
@@ -114,7 +114,7 @@ void summarizer_fw_termt::compute_summary_rec(
   {
     do_nontermination(function_name, SSA, summary);
   }
-  if(summary.terminates==UNKNOWN)
+  if(summary.terminates==UNKNOWNT)
   {
     bool has_terminating_function_calls=
       has_function_calls && calls_terminate==YES;
@@ -197,7 +197,7 @@ void summarizer_fw_termt::inline_summaries(
       {
         // cannot propagate NO
         // because call reachability might be over-approximating
-        calls_terminate=UNKNOWN;
+        calls_terminate=UNKNOWNT;
         break;
       }
     }
@@ -294,11 +294,11 @@ threevalt summarizer_fw_termt::check_termination_argument(exprt expr)
         it!=expr.operands().end(); it++)
     {
       if(it->is_true())
-        result=UNKNOWN;
+        result=UNKNOWNT;
       if(it->id()==ID_implies)
       {
         if(to_implies_expr(*it).op1().is_true())
-          result=UNKNOWN;
+          result=UNKNOWNT;
       }
     }
     return result;
@@ -308,10 +308,10 @@ threevalt summarizer_fw_termt::check_termination_argument(exprt expr)
     if(expr.id()==ID_implies)
     {
       if(to_implies_expr(expr).op1().is_true())
-        return UNKNOWN;
+        return UNKNOWNT;
     }
     else
-      return !expr.is_true() ? YES : UNKNOWN;
+      return !expr.is_true() ? YES : UNKNOWNT;
   }
   return YES;
 }
