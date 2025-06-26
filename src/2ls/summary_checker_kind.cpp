@@ -39,6 +39,11 @@ resultt summary_checker_kindt::operator()()
     bool magic_limit_not_reached=
       unwind<give_up_invariants ||
       !options.get_bool_option("competition-mode");
+
+      status() << "Result after unwinding: " << 
+      (result == resultt::PASS ? "PASS" : 
+       result == resultt::FAIL ? "FAIL" : "UNKNOWN") << eom;
+
     if(result==resultt::UNKNOWN && !options.get_bool_option("havoc") &&
        magic_limit_not_reached)
     {

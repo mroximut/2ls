@@ -10,6 +10,7 @@ Author: Daniel Kroening, Peter Schrammel
 /// 2LS Main Module
 
 #include <util/unicode.h>
+#include <iostream>
 
 #include "2ls_parse_options.h"
 

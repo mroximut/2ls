@@ -27,6 +27,7 @@ bash ./build_with_mallob.sh
 #   make -C src $2
 # fi
 cd ../..
+rm ./src/2ls/lib2ls.a ./src/solver/solver.a
 bash ./lib/cbmc/build_with_mallob.sh
 # if [ "$COMPILER" != "" ]
 # then
