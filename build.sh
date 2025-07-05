@@ -1,10 +1,10 @@
 #!/bin/bash
 
 if [ ! -d "lib/cbmc" ]; then
-  mkdir -p lib/cbmc
-  cd lib/cbmc
+  mkdir -p lib
+  cd lib
   git clone git@github.com:mroximut/cbmc.git --branch 2ls5.61
-  cd ../..
+  cd ..
 fi
 cd lib/cbmc
 bash ./build_with_cadical.sh
