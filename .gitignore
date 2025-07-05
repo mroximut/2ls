@@ -6,7 +6,7 @@
 *.obj
 *.a
 *.lib
-
+.vscode
 cbmc/
 src/config.inc
 lib/
